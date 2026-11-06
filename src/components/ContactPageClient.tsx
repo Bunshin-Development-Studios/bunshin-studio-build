@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ const expectSteps = [
   {
     step: "01",
     heading: "We read it ourselves, fast.",
-    body: "Every message goes straight to Rafael and Jose, not a CRM queue or a support inbox.",
+    body: "Every message goes straight to the people who build, not a CRM queue or a support inbox.",
   },
   {
     step: "02",
@@ -22,12 +22,20 @@ const expectSteps = [
   {
     step: "03",
     heading: "We come back with a plan and a price.",
-    body: "If it's a fit, you get a clear scope and a fixed price for the actual thing you want. You own the vision the whole way.",
+    body: "If it's a fit, you get a clear scope and a fixed price for the actual thing you want. You stay in charge the whole way.",
   },
 ];
 
 export default function ContactPageClient() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  // The homepage close sends the visitor's idea as ?idea=…; start their message with it.
+  useEffect(() => {
+    const idea = new URLSearchParams(window.location.search).get("idea")?.trim();
+    if (!idea) return;
+    const field = document.getElementById("contact-general-description") as HTMLTextAreaElement | null;
+    if (field && !field.value) field.value = `I'm building: ${idea.slice(0, 200)}\n\n`;
+  }, []);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -72,9 +80,23 @@ export default function ContactPageClient() {
             <span>You reach the builders directly</span>
           </p>
 
+          <p className="font-mono text-xs text-primary text-center mb-4">{contactContent.formTitle}</p>
+          <form onSubmit={handleSubmit} className="rounded-xl p-6 md:p-8 space-y-6 w-full border border-border bg-card">
+            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-name">Name</label>
+            <Input id="contact-name" name="name" required placeholder="Your name" disabled={fieldDisabled} autoComplete="name" />
+            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-email">Email</label>
+            <Input id="contact-email" name="email" type="email" required placeholder="you@company.com" disabled={fieldDisabled} autoComplete="email" aria-required="true" />
+            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-general-description">What you&apos;re building</label>
+            <Textarea id="contact-general-description" name="message" required rows={5} placeholder="What are you building? Tell us what it is, why it has to exist, and where you are: an idea, or an existing business." disabled={fieldDisabled} className="resize-y min-h-[120px]" />
+            <div className="flex flex-col items-center gap-3 pt-1 min-h-[3rem] justify-center">
+              {status === "success" ? <p className="font-mono text-sm text-primary text-center animate-in fade-in-0 duration-300">{contactContent.successMessage}</p> : <Button type="submit" size="lg" className="font-mono w-full sm:w-auto" disabled={status === "submitting"}>{status === "submitting" ? contactContent.submittingLabel : contactContent.submitLabel}</Button>}
+              {status === "error" && <p className="text-xs text-red-400 font-sans text-center">{contactContent.errorMessage}</p>}
+            </div>
+          </form>
+
           {/* What to expect */}
-          <div className="mb-10">
-            <p className="font-mono text-xs text-primary text-center mb-6">// what to expect</p>
+          <div className="mt-12">
+            <p className="font-mono text-xs text-primary text-center mb-6">What to expect</p>
             <div className="space-y-4">
               {expectSteps.map((item) => (
                 <div key={item.step} className="flex gap-4 items-start rounded-lg p-4 border border-border">
@@ -87,22 +109,6 @@ export default function ContactPageClient() {
               ))}
             </div>
           </div>
-
-          <p className="font-mono text-xs text-primary text-center mb-4">{contactContent.formTitle}</p>
-          <form onSubmit={handleSubmit} className="rounded-xl p-6 md:p-8 space-y-6 w-full border border-border bg-card">
-            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-name">Name</label>
-            <Input id="contact-name" name="name" required placeholder="Your name" disabled={fieldDisabled} autoComplete="name" />
-            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-email">Email <span className="text-destructive">*</span></label>
-            <Input id="contact-email" name="email" type="email" required placeholder="you@company.com" disabled={fieldDisabled} autoComplete="email" aria-required="true" />
-            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-business">Business or project</label>
-            <Input id="contact-business" name="business" placeholder="Your company, or just what you're calling your idea" disabled={fieldDisabled} autoComplete="organization" />
-            <label className="block text-sm font-mono mb-2 text-secondary-foreground" htmlFor="contact-general-description">What you&apos;re building</label>
-            <Textarea id="contact-general-description" name="message" required rows={5} placeholder="What are you building? Tell us what it is, why it has to exist, and where you are: an idea, or an existing business." disabled={fieldDisabled} className="resize-y min-h-[120px]" />
-            <div className="flex flex-col items-center gap-3 pt-1 min-h-[3rem] justify-center">
-              {status === "success" ? <p className="font-mono text-sm text-primary text-center animate-in fade-in-0 duration-300">{contactContent.successMessage}</p> : <Button type="submit" size="lg" className="font-mono w-full sm:w-auto" disabled={status === "submitting"}>{status === "submitting" ? contactContent.submittingLabel : contactContent.submitLabel}</Button>}
-              {status === "error" && <p className="text-xs text-red-400 font-sans text-center">{contactContent.errorMessage}</p>}
-            </div>
-          </form>
         </section>
       </main>
       <Footer />

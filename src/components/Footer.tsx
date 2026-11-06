@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <p className="font-mono text-xl font-bold tracking-widest text-primary mb-1">BUNSHIN</p>
+            <img src="/brand/bunshin-light.svg" alt="Bunshin" width={190} height={170} className="mb-3 h-auto w-[190px]" />
             <p className="font-sans text-sm text-muted-foreground italic mb-1">Engineering magic.</p>
             <p className="font-mono text-xs text-muted-foreground">St. Augustine, FL · Remote-native, building for clients anywhere</p>
           </div>

@@ -43,7 +43,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
       <Navbar />
       <main className="pt-28 pb-24 md:pt-32">
         <section className="container mx-auto px-6 max-w-4xl mb-10 pb-10 border-b border-border">
-          <p className="font-mono text-xs text-primary mb-5">// case study</p>
+          <p className="font-mono text-xs text-primary mb-5">Case study</p>
           <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-[-0.03em] mb-6 text-balance">{project.title}</h1>
           <div className="flex flex-wrap items-center gap-2">
             {project.category && (
@@ -116,7 +116,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
             <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8">
               Tell us what you&apos;re building. We&apos;ll figure out the rest together, no sales call, no pressure.
             </p>
-            <Link href="/contact" className="font-sans font-semibold text-base bg-[#6a37e0] text-white px-8 py-4 rounded-xl hover:bg-[#7b4bff] transition-colors inline-block">
+            <Link href="/contact" className="font-sans font-semibold text-base bg-primary text-primary-foreground px-8 py-4 rounded-none hover:bg-primary/90 transition-colors inline-block">
               Start a build
             </Link>
           </div>

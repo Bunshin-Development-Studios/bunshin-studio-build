@@ -11,8 +11,8 @@ const shortName: Record<string, string> = {
   "core-property-ventures": "Core Property Ventures",
 };
 const tagLine: Record<string, string> = {
-  "animal-control-platform": "B2G · AVAILABLE",
-  "fishing-with-friends": "B2C · PRIVATE BETA",
+  "animal-control-platform": "GOVERNMENT · AVAILABLE",
+  "fishing-with-friends": "CONSUMER · PRIVATE BETA",
 };
 const shortDesc: Record<string, string> = {
   "animal-control-platform":
@@ -32,12 +32,12 @@ export default function PortfolioPageClient() {
       <Navbar />
       <main className="pt-28 md:pt-32">
         <section className="container mx-auto px-6 max-w-5xl pb-12 border-b border-border">
-          <p className="font-mono text-xs text-primary mb-5">// portfolio</p>
+          <p className="font-mono text-xs text-primary mb-5">Portfolio</p>
           <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-[-0.03em] mb-5 text-balance">
             Products we&apos;ve built.
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Our own software, and a few things we built for people who brought us their vision. Every one shipped. Every one real.
+            Our own software, and the apps we build for clients.
           </p>
         </section>
 
@@ -53,13 +53,12 @@ export default function PortfolioPageClient() {
                 <span className="px-2.5 py-1 rounded-full bg-emerald-400/10 text-emerald-300 inline-flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />live
                 </span>
-                <span>B2C</span>
+                <span>Consumer</span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-extrabold mb-4">StreamHalla</h2>
               <p className="text-muted-foreground mb-5 leading-relaxed">
-                AI-powered VOD analytics for Twitch, YouTube, and Kick streamers. Drop in one VOD link and get a
-                sentiment timeline, a six-axis coaching scorecard, and a five-point next-stream action plan. Built
-                around the streamer community it serves.
+                Your stream analyst: a VOD analytics tool for Twitch, YouTube, and Kick streamers. Paste one VOD link
+                and get your stream reviewed, with five evidence-backed recommendations for your next stream.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {(flagship.tags ?? []).slice(0, 5).map((t) => (
@@ -75,7 +74,7 @@ export default function PortfolioPageClient() {
 
         {/* Grid */}
         <section className="container mx-auto px-6 max-w-5xl py-14 md:py-16">
-          <p className="font-mono text-xs text-muted-foreground tracking-wider mb-8">MORE FROM THE SHELF</p>
+          <p className="font-mono text-xs text-muted-foreground tracking-wider mb-8">MORE OF OUR WORK</p>
           <div className="grid md:grid-cols-2 gap-6">
             {grid.map((p) => (
               <Link key={p.id} href={`/portfolio/${p.id}`} className="group rounded-2xl border border-border overflow-hidden hover:border-primary transition-all duration-300">
@@ -96,11 +95,11 @@ export default function PortfolioPageClient() {
               <img src={client.imageSrc} alt={client.title} className="max-h-28 w-auto object-contain" />
             </div>
             <div className="p-9 md:p-11 flex flex-col justify-center">
-              <p className="font-mono text-[11px] text-primary tracking-wider mb-3">BUILT FOR SOMEONE WHO BROUGHT US THEIR VISION</p>
+              <p className="font-mono text-[11px] text-primary tracking-wider mb-3">CLIENT WORK</p>
               <h3 className="font-display text-2xl font-extrabold mb-3 group-hover:text-primary transition-colors">Core Property Ventures</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                An established business that wanted the digital counterpart it deserved. They brought the vision and
-                the means; we built and launched it, with the same rigor as our own products.
+                A Jacksonville real estate investor replacing its Squarespace site. We built a mobile-first site around the QR
+                code on its postcards, with a contact form that turns a scan into a conversation.
               </p>
               <span className="font-semibold text-primary group-hover:underline underline-offset-4">Read the case study →</span>
             </div>

@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="pt-28 md:pt-32">
         <section className="container mx-auto px-6 max-w-4xl pb-12 border-b border-border">
-          <p className="font-mono text-xs text-primary mb-5">// about</p>
+          <p className="font-mono text-xs text-primary mb-5">About</p>
           <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-[-0.03em] mb-5 text-balance">
             {aboutIntro.title}
           </h1>

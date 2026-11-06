@@ -13,7 +13,7 @@ export const servicesIntro = {
   eyebrow: "What we build",
   title: "Two ways we build with you.",
   description:
-    "Whether you're starting from an idea or you already run a business, you own the vision and we build it. No pricing tables, no catalog, just the work and a warm front door.",
+    "Whether you're starting from an idea or you already run a business, we'll build the app you need.",
 };
 
 export const serviceLines: ServiceLine[] = [
@@ -22,14 +22,14 @@ export const serviceLines: ServiceLine[] = [
     eyebrow: "From an idea",
     title: "Turn your idea into a real app.",
     intro:
-      "Greenfield web and mobile builds for people with a conviction and no technical co-founder. From the sketch in your head to a product people actually use, with you as the owner the whole way.",
+      "We build web and mobile apps for people with an idea and no technical co-founder, from the first sketch to a product people actually use. You own it the whole way.",
     body: [
-      "You don't need a technical co-founder or a finished spec to start. You need the thing to exist. We've built from nothing but conviction before, our own products began exactly that way, and we know how to carry an idea all the way to launch.",
-      "What we build: net-new web apps, iOS and Android apps, the backend and cloud infrastructure underneath, and the launch itself. It ships as deterministic, dependable software, so what you own is the real thing, not a prototype held together with hope.",
-      "It's your vision and your call, from the first sketch to launch day. We bring it to life; you decide where it goes.",
+      "You don't need a technical co-founder or a finished plan to start. You just need the idea. Our own products started the same way, and we know how to take one all the way to launch.",
+      "What we build: new web apps, iOS and Android apps, everything behind them, and the launch itself. You end up owning dependable software, not a fragile prototype.",
+      "It's your call from the first sketch to launch day. We do the building; you decide where it goes.",
     ],
     proof:
-      "StreamHalla started as an idea about streamer communities. It's live today. The vault behind us is full of products that began the same way.",
+      "StreamHalla started as an idea about streamer communities. It's live today.",
     cta: "Tell us what you're building. We'll figure out the rest together.",
   },
   {
@@ -37,9 +37,9 @@ export const serviceLines: ServiceLine[] = [
     eyebrow: "For your business",
     title: "Your business deserves a custom app.",
     intro:
-      "You built something real. We build the custom web or mobile app to match: a booking app, an online store, a customer portal, whatever your business actually needs. You stay the owner of the vision; we make it real.",
+      "We build the custom web or mobile app your business needs: a booking app, an online store, a customer portal, or whatever fits. You stay in charge; we do the building.",
     body: [
-      "You don't need to bend your business to fit an off-the-shelf platform that almost works. We build around how your business actually runs, and because we come from healthcare, finance, and nuclear-grade environments, your customers' data is handled like it matters.",
+      "You don't need to bend your business to fit an off-the-shelf platform that almost works. We build around how your business actually runs, and because we come from healthcare, finance, and nuclear power, we take your customers' data seriously.",
     ],
     examples: [
       "a barber or salon that wants a custom booking app",
@@ -52,7 +52,7 @@ export const serviceLines: ServiceLine[] = [
       "a field or logistics team that wants an offline-first app for where the signal drops",
     ],
     proof:
-      "Core Property Ventures came to us as an established business and left with its digital counterpart. We can do the same for yours.",
+      "Core Property Ventures, a Jacksonville real estate investor, needed more than its Squarespace site. We built a new one around the QR code on its postcards, with a contact form that turns a scan into a conversation.",
     cta: "Tell us about your business and what you want to build. We'll figure out the rest together.",
   },
 ];

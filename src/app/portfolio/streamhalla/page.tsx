@@ -6,16 +6,16 @@ import StreamHallaCaseStudy from "@/content/case-studies/streamhalla.mdx"
 const canonicalUrl = `${siteConfig.url}/portfolio/streamhalla/`
 
 export const metadata: Metadata = {
-  title: "StreamHalla — AI VOD Analytics for Twitch, YouTube & Kick | Case Study",
+  title: "StreamHalla: Your Stream Analyst for Twitch, YouTube & Kick | Case Study",
   description:
-    "How Bunshin built StreamHalla — AI-powered VOD analytics that turns a Twitch, YouTube, or Kick stream into a sentiment timeline, a six-axis coaching scorecard, and a 5-point next-stream action plan.",
+    "How Bunshin built StreamHalla, your stream analyst: a VOD analytics tool that reviews a Twitch, YouTube, or Kick stream with a sentiment timeline and five evidence-backed recommendations for your next stream.",
   alternates: {
     canonical: canonicalUrl,
   },
   openGraph: {
-    title: "StreamHalla — AI VOD Analytics for Twitch, YouTube & Kick | Case Study",
+    title: "StreamHalla: Your Stream Analyst for Twitch, YouTube & Kick | Case Study",
     description:
-      "How Bunshin built StreamHalla — AI-powered VOD analytics that turns a Twitch, YouTube, or Kick stream into a sentiment timeline, a six-axis coaching scorecard, and a 5-point next-stream action plan.",
+      "How Bunshin built StreamHalla, your stream analyst: a VOD analytics tool that reviews a Twitch, YouTube, or Kick stream with a sentiment timeline and five evidence-backed recommendations for your next stream.",
     type: "article",
     url: canonicalUrl,
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/og/streamhalla.jpg`,
         width: 1200,
         height: 630,
-        alt: "StreamHalla — post-stream coaching reports for Twitch, YouTube, and Kick",
+        alt: "StreamHalla: your stream analyst for Twitch, YouTube, and Kick",
       },
     ],
   },
@@ -36,9 +36,9 @@ const jsonLd = {
       "@type": "Article",
       "@id": `${canonicalUrl}#article`,
       headline:
-        "StreamHalla — Turning Stream Audience Signals into Honest Post-Stream Coaching",
+        "StreamHalla: Your Stream Analyst for Twitch, YouTube and Kick",
       description:
-        "How Bunshin Development Studios built StreamHalla, AI-powered VOD analytics for small streamers across Twitch, YouTube, and Kick — a sentiment timeline, a six-axis coaching scorecard, and Streamer Trends that surfaces the growth lever moving every other score.",
+        "How Bunshin Development Studios built StreamHalla, a stream analyst for Twitch, YouTube, and Kick streamers: a sentiment timeline, a coaching plan in every review, and Streamer Trends that finds what draws your audience to you.",
       author: {
         "@type": "Organization",
         name: "Bunshin Development Studios",
@@ -54,12 +54,12 @@ const jsonLd = {
         },
       },
       datePublished: "2026-06-25",
-      dateModified: "2026-06-25",
+      dateModified: "2026-11-05",
       mainEntityOfPage: canonicalUrl,
       image: `${siteConfig.url}/og/streamhalla.jpg`,
       about: { "@id": `${canonicalUrl}#platform` },
       keywords:
-        "AI VOD analytics, VOD analytics, streaming coach, sentiment timeline, six-axis coaching scorecard, streamer trends, Twitch, YouTube, Kick, content creator analytics, stream growth",
+        "stream analyst, VOD analytics, VOD review, sentiment timeline, coaching plan, streamer trends, Twitch, YouTube, Kick, content creator analytics, stream growth",
     },
     {
       "@type": "SoftwareApplication",
@@ -70,7 +70,7 @@ const jsonLd = {
       operatingSystem: "Web",
       applicationCategory: "MultimediaApplication",
       description:
-        "AI-powered VOD analytics for small streamers. Paste a Twitch, YouTube, or Kick VOD link and get a sentiment timeline, a six-axis coaching scorecard, and a five-point next-stream action plan — with Streamer Trends across your full report history.",
+        "Your stream analyst: a VOD analytics tool for Twitch, YouTube, and Kick streamers. Paste your VOD link and get your stream reviewed, with five evidence-backed recommendations for your next stream.",
       creator: {
         "@type": "Organization",
         name: "Bunshin Development Studios",

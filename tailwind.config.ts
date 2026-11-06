@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        mono: ['"Spline Sans Mono"', "JetBrains Mono", "monospace"],
-        sans: ['"Hanken Grotesk"', "system-ui", "sans-serif"],
-        display: ['"Bricolage Grotesque"', "system-ui", "sans-serif"],
+        mono: ["var(--font)"],
+        sans: ["var(--font)"],
+        display: ["var(--font)"],
       },
       colors: {
         border: "hsl(var(--border))",
