@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const shelf = [
-  { id: "streamhalla", name: "StreamHalla", meta: "B2C · LIVE", line: "AI-powered VOD analytics for Twitch, YouTube, and Kick streamers: a sentiment timeline and a coaching scorecard from one link." },
-  { id: "animal-control-platform", name: "Animal Control", meta: "B2G · AVAILABLE", line: "90-second field intake with lookup across four microchip registries and owner notification before the officer leaves the scene." },
-  { id: "fishing-with-friends", name: "Fishing with Friends", meta: "B2C · PRIVATE BETA", line: "Offline-first iOS and Android app for catch logging and live tournaments, built for low-signal water." },
+  { id: "streamhalla", name: "StreamHalla", meta: "CONSUMER · LIVE", line: "Your stream analyst for Twitch, YouTube, and Kick: a sentiment timeline and a coaching plan from one VOD link." },
+  { id: "animal-control-platform", name: "Animal Control", meta: "GOVERNMENT · AVAILABLE", line: "90-second field intake with lookup across four microchip registries and owner notification before the officer leaves the scene." },
+  { id: "fishing-with-friends", name: "Fishing with Friends", meta: "CONSUMER · PRIVATE BETA", line: "Offline-first iOS and Android app for catch logging and live tournaments, built for low-signal water." },
   { id: "core-property-ventures", name: "Core Property Ventures", meta: "CLIENT BUILD", line: "An established business we gave its digital counterpart. Built for someone who brought us their vision." },
 ];
 

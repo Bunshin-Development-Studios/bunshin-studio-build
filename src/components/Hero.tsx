@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/portfolio"
-                className="font-sans font-semibold bg-[#6a37e0] text-white px-7 py-3.5 rounded-xl hover:bg-[#7b4bff] transition-colors duration-300"
+                className="font-sans font-semibold bg-primary text-primary-foreground px-7 py-3.5 rounded-none hover:bg-primary/90 transition-colors duration-300"
               >
                 See what we&apos;ve built
               </Link>

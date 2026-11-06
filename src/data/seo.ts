@@ -37,12 +37,12 @@ export const routeMetadata: Record<string, Metadata> = {
   "/services/greenfield": {
     title: { absolute: "Turn Your Idea Into an App: Product Studio for Founders | Bunshin" },
     description:
-      "Have an app idea but no technical co-founder? We build your web or mobile product from scratch and launch it. You own the vision; we make it real. Building for founders anywhere.",
+      "Have an app idea but no technical co-founder? We build your web or mobile product from scratch and launch it. You stay in charge; we do the building. Building for founders anywhere.",
     alternates: { canonical: `${siteConfig.url}/services/greenfield` },
     openGraph: {
       title: "Turn Your Idea Into an App: Product Studio for Founders | Bunshin",
       description:
-        "Have an app idea but no technical co-founder? We build your web or mobile product from scratch and launch it. You own the vision; we make it real.",
+        "Have an app idea but no technical co-founder? We build your web or mobile product from scratch and launch it. You stay in charge; we do the building.",
       type: "website",
       url: `${siteConfig.url}/services/greenfield`,
     },
@@ -50,12 +50,12 @@ export const routeMetadata: Record<string, Metadata> = {
   "/services/for-your-business": {
     title: { absolute: "Custom App for Your Business: Booking, Ecommerce & Portals | Bunshin" },
     description:
-      "You built a real business. We build the custom web or mobile app it deserves: booking, ecommerce, customer portals, and more. Serving Jacksonville and St. Augustine, FL, and clients nationwide.",
+      "You built a real business. We build the custom web or mobile app it needs: booking, ecommerce, customer portals, and more. Serving Jacksonville and St. Augustine, FL, and clients nationwide.",
     alternates: { canonical: `${siteConfig.url}/services/for-your-business` },
     openGraph: {
       title: "Custom App for Your Business: Booking, Ecommerce & Portals | Bunshin",
       description:
-        "You built a real business. We build the custom web or mobile app it deserves: booking, ecommerce, customer portals, and more. Local to Jacksonville and St. Augustine, FL; building nationwide.",
+        "You built a real business. We build the custom web or mobile app it needs: booking, ecommerce, customer portals, and more. Local to Jacksonville and St. Augustine, FL; building nationwide.",
       type: "website",
       url: `${siteConfig.url}/services/for-your-business`,
     },
@@ -63,12 +63,12 @@ export const routeMetadata: Record<string, Metadata> = {
   "/portfolio": {
     title: { absolute: "Products We've Built | Bunshin Product Studio" },
     description:
-      "Web and mobile products from Bunshin, a veteran-owned product studio: StreamHalla (live AI VOD analytics) and more, taken from idea to launch.",
+      "Web and mobile products from Bunshin, a veteran-owned product studio: StreamHalla (a live stream analyst for Twitch, YouTube and Kick) and more, taken from idea to launch.",
     alternates: { canonical: `${siteConfig.url}/portfolio` },
     openGraph: {
       title: "Products We've Built | Bunshin Product Studio",
       description:
-        "Web and mobile products from Bunshin, a veteran-owned product studio: StreamHalla (live AI VOD analytics) and more, taken from idea to launch.",
+        "Web and mobile products from Bunshin, a veteran-owned product studio: StreamHalla (a live stream analyst for Twitch, YouTube and Kick) and more, taken from idea to launch.",
       type: "website",
       url: `${siteConfig.url}/portfolio`,
     },
@@ -102,12 +102,12 @@ export const routeMetadata: Record<string, Metadata> = {
   "/about": {
     title: { absolute: "About: Veteran-Owned Product Studio | Bunshin" },
     description:
-      "Two builders from nuclear, naval, healthcare, and Web3, now building products people love. Veteran-owned and remote-native, rooted in St. Augustine, FL.",
+      "Builders from nuclear, naval, healthcare, and Web3, now building web and mobile apps people love. Veteran-owned and remote-native, rooted in St. Augustine, FL.",
     alternates: { canonical: `${siteConfig.url}/about` },
     openGraph: {
       title: "About: Veteran-Owned Product Studio | Bunshin",
       description:
-        "Two builders from nuclear, naval, healthcare, and Web3, now building products people love. Veteran-owned and remote-native, rooted in St. Augustine, FL.",
+        "Builders from nuclear, naval, healthcare, and Web3, now building web and mobile apps people love. Veteran-owned and remote-native, rooted in St. Augustine, FL.",
       type: "website",
       url: `${siteConfig.url}/about`,
     },

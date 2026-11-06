@@ -1,58 +1,106 @@
-/* Brand fonts — @import must precede @tailwind for PostCSS */
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Bunshin — palette kept from the brand.
+  Arbok purple is the ground, Japan red and Arbok yellow are whole fields,
+  yellow is the one action colour, aubergine is the darkest tone.
+*/
 @layer base {
   :root {
-    /* Theme: Midnight Workshop — warm obsidian + electric-violet magic spark + ember */
-    --background: 261 24% 7%;
-    --foreground: 280 11% 92%;
-    --card: 260 22% 11%;
-    --card-foreground: 280 11% 92%;
-    --popover: 260 22% 11%;
-    --popover-foreground: 280 11% 92%;
-    --primary: 259 100% 71%;
-    --primary-foreground: 260 45% 9%;
-    --accent-purple: 259 100% 71%;
-    --secondary: 258 52% 30%;
-    --secondary-foreground: 280 20% 95%;
-    --muted: 258 14% 18%;
-    --muted-foreground: 256 13% 68%;
-    --accent: 259 100% 71%;
-    --accent-foreground: 260 45% 9%;
-    --ember: 31 100% 68%;
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 258 15% 20%;
-    --input: 258 15% 22%;
-    --ring: 259 100% 71%;
-    --radius: 0.85rem;
-    --sidebar-background: 261 24% 8%;
-    --sidebar-foreground: 280 11% 92%;
-    --sidebar-primary: 259 100% 71%;
-    --sidebar-primary-foreground: 260 45% 9%;
-    --sidebar-accent: 258 14% 16%;
-    --sidebar-accent-foreground: 280 11% 92%;
-    --sidebar-border: 258 15% 22%;
-    --sidebar-ring: 259 100% 71%;
+    /* brand roles (hex, used by the site's own CSS) */
+    --purple: #5b3a78;
+    --purple-deep: #4b2f64; /* one tone step down: fields on purple */
+    --red: #bc002d;
+    --yellow: #f2c230;
+    --yellow-strong: #ffd34d;
+    --dark: #1e1226;
+    --dark-2: #2a1a33;
+    --paper: #f4f0f6;
+    --paper-2: #e9e2ee;
+
+    --ink: #fbf7fc; /* text on purple, red, dark */
+    --ink-dark: #1e1226; /* text on yellow and paper */
+    --soft: #dccbe8; /* secondary text on purple (5.9:1) */
+    --muted-dark: #b9a5c9; /* secondary text on dark (7.9:1) */
+    --muted-paper: #6e5d7a; /* secondary text on paper (5.3:1) */
+
+    --bg: var(--purple);
+    --action: var(--yellow);
+    --action-ink: var(--ink-dark);
+
+    /* type: one family, five steps */
+    --font: var(--font-hanken), "Hanken Grotesk", system-ui, sans-serif;
+    --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+    --step-lead: clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
+    --step-head: clamp(1.875rem, 0.9rem + 4vw, 4.5rem);
+    --step-display: clamp(4rem, 12vw, 13rem);
+
+    /* frame */
+    --margin: clamp(16px, 2.2vw, 32px);
+    --section-gap: clamp(96px, 14vw, 200px);
+
+    /* motion */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+    --t-press: 140ms;
+    --t-hover: 180ms;
+    --t-ui: 240ms;
+    --t-reveal: 800ms;
+
+    /* shadcn / Tailwind roles (HSL triplets) mapped onto the brand */
+    --background: 272 35% 35%;
+    --foreground: 288 60% 98%;
+    --card: 278 32% 15%;
+    --card-foreground: 288 60% 98%;
+    --popover: 276 36% 11%;
+    --popover-foreground: 288 60% 98%;
+    --primary: 45 88% 57%;
+    --primary-foreground: 276 36% 11%;
+    --accent-purple: 45 88% 57%;
+    --secondary: 276 36% 11%;
+    --secondary-foreground: 288 60% 98%;
+    --muted: 272 36% 29%;
+    --muted-foreground: 275 39% 85%;
+    --accent: 45 88% 57%;
+    --accent-foreground: 276 36% 11%;
+    --ember: 346 100% 37%;
+    --destructive: 346 100% 37%;
+    --destructive-foreground: 288 60% 98%;
+    --border: 272 29% 43%;
+    --input: 272 36% 29%;
+    --ring: 45 88% 57%;
+    --radius: 0px;
+    --sidebar-background: 276 36% 11%;
+    --sidebar-foreground: 288 60% 98%;
+    --sidebar-primary: 45 88% 57%;
+    --sidebar-primary-foreground: 276 36% 11%;
+    --sidebar-accent: 278 32% 15%;
+    --sidebar-accent-foreground: 288 60% 98%;
+    --sidebar-border: 272 29% 43%;
+    --sidebar-ring: 45 88% 57%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
-    scroll-behavior: smooth;
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "Hanken Grotesk", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: var(--step-body);
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
@@ -61,42 +109,37 @@
   h4,
   h5,
   h6 {
-    font-family: "Bricolage Grotesque", system-ui, sans-serif;
-    letter-spacing: -0.02em;
+    font-family: var(--font);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--yellow);
+    color: var(--ink-dark);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
   }
 }
 
 @layer utilities {
-  .font-mono-brand {
-    font-family: "Spline Sans Mono", monospace;
-  }
-
-  /* Solid warm surface — glassmorphism retired; cards are real material now */
+  /* legacy class names still used by inner pages until they are rebuilt; mapped to the new roles */
   .glass {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.03), 0 12px 34px rgba(0, 0, 0, 0.35);
+    background: var(--dark-2);
   }
-
-  /* Glow retired per design direction — kept as no-ops so any legacy usage stays flat */
-  .cyan-glow {
-    box-shadow: none;
-  }
-
-  .cyan-glow-sm {
-    box-shadow: none;
-  }
-
-  /* Was gradient text (a slop ban). Now a single solid violet for emphasis. */
-  .text-gradient-cyan {
-    color: hsl(var(--primary));
-  }
-
+  .text-gradient-cyan,
   .text-ember {
-    color: hsl(var(--ember));
+    color: var(--yellow);
   }
-
   .border-glow {
-    border-color: hsl(259 100% 71% / 0.5);
+    border-color: var(--yellow);
   }
 }

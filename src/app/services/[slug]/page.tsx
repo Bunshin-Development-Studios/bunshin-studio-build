@@ -25,7 +25,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <Navbar />
       <main className="pt-28 pb-24 md:pt-32">
         <section className="container mx-auto px-6 max-w-3xl mb-12">
-          <p className="font-mono text-xs text-primary mb-4">// {line.eyebrow.toLowerCase()}</p>
+          <p className="font-mono text-xs text-primary mb-4">{line.eyebrow}</p>
           <h1 className="font-display text-4xl md:text-6xl font-extrabold mb-6 leading-[1.0] tracking-[-0.03em]">{line.title}</h1>
           <p className="text-lg text-muted-foreground font-sans leading-relaxed">{line.intro}</p>
         </section>
@@ -62,7 +62,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <p className="text-lg text-foreground font-sans leading-relaxed mb-6 max-w-xl mx-auto">{line.cta}</p>
             <Link
               href="/contact"
-              className="font-sans font-semibold text-base bg-[#6a37e0] text-white px-8 py-4 rounded-xl hover:bg-[#7b4bff] transition-colors inline-block"
+              className="font-sans font-semibold text-base bg-primary text-primary-foreground px-8 py-4 rounded-none hover:bg-primary/90 transition-colors inline-block"
             >
               Start a build
             </Link>

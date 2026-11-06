@@ -78,7 +78,6 @@ const jsonLd = {
         price: "0",
         priceCurrency: "USD",
       },
-      datePublished: "2026-05",
       programmingLanguage: ["Dart", "SQL", "TypeScript"],
     },
     {

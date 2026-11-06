@@ -19,8 +19,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg font-extrabold tracking-tight">
-          Bunshin <span className="text-muted-foreground font-semibold">Development Studios</span>
+        <Link href="/" className="flex items-center gap-3 font-display text-lg font-extrabold tracking-tight">
+          <img src="/brand/bunshin-mark-light.svg" alt="" width={46} height={36} className="h-9 w-auto" />
+          <span>Bunshin <span className="text-muted-foreground font-semibold">Development Studios</span></span>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-7">
@@ -32,7 +33,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/contact"
-              className="font-sans text-sm font-semibold bg-[#6a37e0] text-white px-5 py-2 rounded-lg hover:bg-[#7b4bff] transition-colors duration-200"
+              className="font-sans text-sm font-semibold bg-primary text-primary-foreground px-5 py-2 rounded-none hover:bg-primary/90 transition-colors duration-200"
             >
               Start a build
             </Link>
@@ -55,7 +56,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/contact"
-                className="font-sans text-sm font-semibold bg-[#6a37e0] text-white px-5 py-2 rounded-lg w-full block text-center"
+                className="font-sans text-sm font-semibold bg-primary text-primary-foreground px-5 py-2 rounded-none w-full block text-center"
                 onClick={() => setOpen(false)}
               >
                 Start a build

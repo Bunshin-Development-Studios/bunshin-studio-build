@@ -29,7 +29,7 @@ export const portfolioIntro = {
   eyebrow: "Portfolio",
   title: "Products we've built.",
   description:
-    "Our own software, and a few things we built for people who brought us their vision. Every one shipped. Every one real.",
+    "Our own software, and the apps we build for clients.",
 };
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -37,36 +37,38 @@ export const portfolioProjects: PortfolioProject[] = [
     id: "streamhalla",
     title: "StreamHalla",
     summary:
-      "StreamHalla is AI-powered VOD analytics for Twitch, YouTube, and Kick streamers. Twitch Analytics and YouTube Studio show view counts; they don't tell a streamer why the room went quiet or what's changing across streams. StreamHalla does. Paste a VOD link and get back a six-axis coaching scorecard, a sentiment timeline, and a five-point next-stream action plan. The first analysis is free, and Streamer Trends surfaces the one growth lever moving every other score across a streamer's whole history.",
+      "StreamHalla is your stream analyst: a VOD analytics tool for Twitch, YouTube, and Kick streamers. Twitch Analytics and YouTube Studio show view counts; they don't explain why viewers left or which moments resonated. StreamHalla does. Paste a VOD link and get your stream reviewed, with five evidence-backed recommendations for your next stream. One full review a week is free, and Streamer Trends finds what draws your audience to you.",
     highlights: [
       {
-        heading: "Coaching Scorecard",
-        body: "Every report grades the stream on six axes — engagement, chat positivity, peak moments, consistency, retention, and community vibe — benchmarked against streamers at the same tier.",
+        heading: "Audio Analysis",
+        body: "It listens to the stream: your pacing, your dead air, how often you address the audience, and whether you answered chat.",
       },
       {
-        heading: "Chat Sentiment Timeline",
-        body: "Maps the emotional arc of the whole stream and names the peaks and dips, so a streamer can rewatch the moments that mattered instead of scrubbing through hours of VOD.",
+        heading: "Sentiment Timeline",
+        body: "See which moments made your stream pop off and which ones stalled it, with the moments worth clipping flagged for you.",
+      },
+      {
+        heading: "Scored Against You",
+        body: "Scores are only there to benchmark you against yourself. Your next stream is measured against your last ones, not somebody else's channel.",
+      },
+      {
+        heading: "Coaching Plan",
+        body: "A game plan and tips for your next stream in each review: five evidence-backed recommendations.",
       },
       {
         heading: "Streamer Trends",
-        body: "Looks across a streamer's full report history to find the one variable quietly moving all their other scores — a pattern no single VOD or platform dashboard can show.",
+        body: "Finds what draws your audience to you, and how your content, your schedule and your timing move your numbers.",
       },
       {
-        heading: "Multi-Platform",
-        body: "One read on performance across Twitch, YouTube, and Kick — wherever a streamer goes live. No video is downloaded.",
-      },
-      {
-        heading: "Free First Report",
-        body: "The first coaching report is free with no account needed to start — the honest read that gets a small streamer in the door.",
+        heading: "Free Weekly Review",
+        body: "One full review a week on the house, with just an email and no card. Works on any public Twitch, YouTube, or Kick VOD.",
       },
     ],
     url: "https://streamhalla.com",
     imageSrc: "/portfolio/streamhalla/card.png",
     imagePosition: "center center",
     images: [
-      "/portfolio/streamhalla/screenshots/feature-coaching-scorecard.png",
-      "/portfolio/streamhalla/screenshots/feature-chat-sentiment.png",
-      "/portfolio/streamhalla/screenshots/feature-streamer-trends.png",
+      "/portfolio/streamhalla/screenshots/site-hero.png",
     ],
     tags: ["React", "Node.js", "PostgreSQL", "Fly.io", "Docker", "LLM Pipeline"],
     category: "Internal",
@@ -97,7 +99,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
       {
         heading: "Cross-Platform",
-        body: "Single Flutter codebase targeting iOS and Android — App Store and Google Play deployment.",
+        body: "Single Flutter codebase for iOS and Android.",
       },
     ],
     url: "",
